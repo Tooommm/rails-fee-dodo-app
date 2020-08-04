@@ -1,4 +1,4 @@
-class EventsController <
+class EventsController
 
   def index
   end
