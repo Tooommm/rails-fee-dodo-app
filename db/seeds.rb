@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+p "Destroying type"
+Type.destroy_all
+types_name = ["Sieste", "Réveil", "Couché", "Repas", "Réveil Nocturne"]
+
+
+types_name.each do |type|
+  new_type = Type.new
+  new_type.name = type
+  new_type.save
+  p "#{type} created !"
+end

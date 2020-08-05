@@ -1,0 +1,9 @@
+<div class="form-booking" id="form-booking">
+    <div class="form-wrapper">
+        <%= simple_form_for @event, url: events_path(@event), method: :post, remote: true do |f| %>
+        <%= f.input :date, as: :date, required: false, input_html: {class: "flatpickr"}, placeholder:"Sélectionner la date", label: "Date de début du cours" %>
+        <%= f.input :type, prompt: "Type d'évènement" %>
+        <%= f.button :submit, "enregistrer", class: "btn btn-primary" %>
+        <% end %>
+    </div>
+</div>
