@@ -8,6 +8,26 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email" }%>
+    <%= f.input :name,
+                label: "Nom de la famille",
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "name" }%>
+    <%= f.input :child_name,
+                label: "Prénom de l'enfant",
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "child_name" }%>
+    <%= f.input :phone,
+                label: "Numéro de téléphone",
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "Numéro de téléphone" }%>
+    <%= f.input :sleep_objective,
+                label: "Objectif de sommeil journalier en heure",
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "Objectif de sommeil journalier en heure" }%>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),

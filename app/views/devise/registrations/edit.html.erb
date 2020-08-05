@@ -9,7 +9,26 @@
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
-
+    <%= f.input :name,
+                label: "Nom de la famille",
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "name" }%>
+    <%= f.input :child_name,
+                label: "Prénom de l'enfant",
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "child_name" }%>
+    <%= f.input :phone,
+                label: "Numéro de téléphone",
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "Numéro de téléphone" }%>
+    <%= f.input :sleep_objective,
+                label: "Objectif de sommeil journalier en heure",
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "Objectif de sommeil journalier en heure" }%>
     <%= f.input :password,
                 hint: "leave it blank if you don't want to change it",
                 required: false,
